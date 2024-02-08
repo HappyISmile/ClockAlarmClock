@@ -73,7 +73,6 @@ public class TelegramBot extends TelegramLongPollingBot {
 
             if(update.getMessage().getText().contains("/alarmtime")){
                 setAlarmTime(update.getMessage());
-//                update.getMessage().getText().replace("/alarmtime", "");
             }
 
             switch (messageText){
@@ -87,11 +86,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                     break;
                 case "/delreg":
                     deleteRegistrationUser(update.getMessage());
-//                    startCommandRecieved(chatId, update.getMessage().getChat().getFirstName());
                     break;
-//                case "/alarmtime":
-//                    setAlarmTime(chatId);
-//                    break;
 
                 default:
                     sendMessage(chatId, "Sorry, command was not recognized");
